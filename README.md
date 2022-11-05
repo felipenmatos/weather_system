@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Introdução:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto consiste em um desenvolvimento do aplicativo Web e Mobile CLIMATEMPO, onde é possível efetuar o login e pesquisar o clima em determinada região, com regra de autocomplete e renderização de cards com detalhamento do tempo por data. O projeto em si tem como baixa/média escalabilidade no qual foi adaptado a algumas práticas de Clean Code para otimizar o resultado. 
 
-## Available Scripts
+# Localização do projeto: 
 
-In the project directory, you can run:
+O projeto está localizado na pasta **Climatempo** no qual foi readaptado o arquivo de imagens e banco de dados. 
 
-### `npm start`
+# Inicialização do Projeto: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para inicializar o projeto e garantir a inicialização do servidor Backend, é necessário antes executar o seguinte comando no seu terminal da raíz do projeto: “json-server --watch db.json --port 5000”. Logo em seguida executar npm start ou executar a execução pelo Docker criando a imagem. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Desenvolvimento: 
 
-### `npm test`
+O projeto teve como arquitetura de desenvolvimento, React + Typescript, no qual foi implementado os componentes reutilizáveis com tipificação dos seus atributos para manter o padrão do projeto. Foi utilizado como teste dos componentes a biblioteca Storybook para garantir a estilização seguindo o Figma e sua funcionalidade, seria implementado também o teste utilizando Jest, porém não deu tempo para usar o mesmo. A estilização foi criada utilizando o styled-components seguindo o Design System. O banco de dados foi unificado em um único arquivo para melhor otimização das requisições, sendo consumido numa API Rest utilizando a lib JSON-SERVER, fazendo assim o tratamento dos endpoints. No teste de usabilidade, vi que para garantir uma experiência mais fácil teria que reformular alguns padrões, dentre eles a exibição dos cards em carousel, utilizando a lib REACT-SLICK. O autocomplete foi criado com base nos conhecimentos básicos de javascript. As rotas foram autenticadas utilizando o localStorage, sendo necessário o registro na tela de Login. Por fim, foi configurado o Docker na raiz do projeto, como solicitado no teste. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Imagem da arquitetura desenvolvida no MIRO: 
 
-### `npm run build`
+![architecture](https://user-images.githubusercontent.com/82072640/199833524-b67c925b-0f61-461b-b419-4a9ee48cb37f.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bibliotecas e pacotes utilizados no Projeto: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+•	NPM
+•	REACT-ROUTER-DOM
+•	STYLED-COMPONENTS
+•	STORYBOOK : https://storybook.js.org/docs/react/get-started/install/
+•	AXIOS : https://axios-http.com/ptbr/docs/intro
+•	REACT-SLICK: https://react-slick.neostack.com/
+•	JSON-SERVER : https://www.npmjs.com/package/json-server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Protótipo: 
 
-### `npm run eject`
+![Protótipo](https://user-images.githubusercontent.com/82072640/199833629-33b9afbb-87f6-417f-b7d6-0c76afbd2335.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+O protótipo foi desenvolvido com base no exemplo informado no readme e recriado utilizando o Figma, mantendo um Design System para o projeto. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Storybook: 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![TestCard](https://user-images.githubusercontent.com/82072640/199833789-eddf4165-9755-4b22-a2e1-fa1f7056d672.jpg)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Docker: 
 
-## Learn More
+![Docker](https://user-images.githubusercontent.com/82072640/199834314-9a58cbfc-e5fd-47ae-9921-7a901f8bf7db.jpg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Banco de Dados: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![APIrest](https://user-images.githubusercontent.com/82072640/199833964-923d1ee3-064d-4147-b72f-8bccf1412d1d.jpg)
+
+![jsonServer](https://user-images.githubusercontent.com/82072640/199833977-72411710-9c56-4ab8-bddf-a77f56688fee.jpg)
+
+
+
+# Usabilidade WEB: 
+
+[Web.webm](https://user-images.githubusercontent.com/82072640/199834051-899d1324-5f16-44c3-bbf2-cfb5c83646ad.webm)
+
+# Usabilidade MOBILE:
+
+[mobile.webm](https://user-images.githubusercontent.com/82072640/199834119-88642527-3c20-4a8c-874d-fc129645cb50.webm)
+
