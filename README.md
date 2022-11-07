@@ -8,7 +8,7 @@ O projeto está localizado na pasta **Climatempo** no qual foi readaptado o arqu
 
 # Inicialização do Projeto: 
 
-Para inicializar o projeto e garantir a inicialização do servidor Backend, é necessário antes executar o seguinte comando no seu terminal da raíz do projeto: “json-server --watch db.json --port 5000”. Logo em seguida executar npm start ou executar a execução pelo Docker criando a imagem. 
+Para inicializar o projeto deve-se executar no terminal o npm install e também garantir a inicialização do servidor Backend executando o seguinte comando no seu terminal da raíz do projeto: “json-server --watch db.json --port 5000”. Logo em seguida executar npm start ou executar pelo Docker criando a imagem. 
 
 # Desenvolvimento: 
 
