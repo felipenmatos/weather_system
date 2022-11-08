@@ -76,6 +76,20 @@ const Body = styled.div`
     align-items: center;
     padding: 10px;
   }
+
+  @media (max-width: 375px) {
+    width: 270px;
+    height: 40px;
+    margin-top: 80%;
+    margin-left: 20%;
+    border-radius: 10px;
+    background-color: #04a1cc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
 `;
 
 const Text = styled.p`

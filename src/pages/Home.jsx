@@ -231,9 +231,9 @@ const InputSearch = styled.input`
 const Paper = styled.div`
   width: 350px;
   height: 130px;
-  position: absolute;
-  top: 71%;
-  display: flex
+  position: relative;
+  margin-bottom: -22%;
+  display: flex;
   flex-direction: column;
   background-color: rgba(4, 161, 204, 0.3);
   border-radius: 0px 0px 10px 10px;
@@ -242,17 +242,19 @@ const Paper = styled.div`
   @media (max-width: 868px) {
     width: 280px;
     height: 110px;
-    top: 51%;
+    position: relative;
+    margin-bottom: -22%;
     z-index: 1;
-    background-color: rgba(4, 161, 204)
+    background-color: rgba(4, 161, 204);
   }
 
   @media (max-width: 468px) {
     width: 280px;
     height: 140px;
-    top: 44%;
+    position: relative;
+    margin-bottom: -22%;
     z-index: 1;
-    background-color: rgba(4, 161, 204)
+    background-color: rgba(4, 161, 204);
   }
 `;
 
