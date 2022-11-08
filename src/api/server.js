@@ -1,1 +1,1 @@
-export const Url = "http://localhost:5000/data";
+export const Url = "https://api-weather-search.herokuapp.com/locales";

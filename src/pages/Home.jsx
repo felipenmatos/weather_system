@@ -59,7 +59,7 @@ function Home() {
   useEffect(() => {
     const load = async () => {
       const response = await axios.get(Url);
-      setOptions(response.data[0].locales);
+      setOptions(response.data.data[0].locales);
     };
     load();
   }, []);
@@ -69,7 +69,7 @@ function Home() {
     setSuggestions([]);
     const loadData = async () => {
       const response = await axios.get(Url);
-      const dataClimate = response.data[1].data;
+      const dataClimate = response.data.data[1].data;
       const filterArray = dataClimate.filter(function (obj) {
         return obj.locale.name === text;
       });
