@@ -15,6 +15,7 @@ Para inicializar o projeto baixado pelo Github, primeiro deve executar no termin
 O projeto teve como arquitetura de desenvolvimento, React + Typescript, no qual foi implementado os componentes reutilizáveis com tipificação dos seus atributos para manter o padrão do projeto. Foi utilizado como teste dos componentes a biblioteca Storybook para garantir a estilização seguindo o Figma e sua funcionalidade, seria implementado também o teste utilizando Jest, que logo será incluído. A estilização foi criada utilizando o styled-components seguindo o Design System. A api foi desenvolvida em NodeJs, centralizando o banco de dados em um único deploy, fazendo assim o tratamento dos endpoints. No teste de usabilidade, vi que para garantir uma experiência mais fácil teria que reformular alguns padrões, dentre eles a exibição dos cards em carousel, utilizando a lib REACT-SLICK. O autocomplete foi criado com base nos conhecimentos básicos de javascript. As rotas foram autenticadas utilizando o localStorage, sendo necessário o registro na tela de Login. Por fim, foi configurado o Docker na raiz do projeto, como solicitado no teste.
 
 # Imagem da arquitetura desenvolvida no MIRO:
+(OBS: A arquitetura backend da imagem é antiga, no qual foi realocado para API externa.)
 
 ![architecture](https://user-images.githubusercontent.com/82072640/199833524-b67c925b-0f61-461b-b419-4a9ee48cb37f.jpg)
 
@@ -26,7 +27,6 @@ O projeto teve como arquitetura de desenvolvimento, React + Typescript, no qual 
 • STORYBOOK : https://storybook.js.org/docs/react/get-started/install/
 • AXIOS : https://axios-http.com/ptbr/docs/intro
 • REACT-SLICK: https://react-slick.neostack.com/
-• JSON-SERVER : https://www.npmjs.com/package/json-server
 
 # Protótipo:
 
@@ -42,11 +42,9 @@ O protótipo foi desenvolvido com base no exemplo informado no readme e recriado
 
 ![Docker](https://user-images.githubusercontent.com/82072640/199834314-9a58cbfc-e5fd-47ae-9921-7a901f8bf7db.jpg)
 
-# Banco de Dados:
+# API:
 
-![APIrest](https://user-images.githubusercontent.com/82072640/199833964-923d1ee3-064d-4147-b72f-8bccf1412d1d.jpg)
-
-![jsonServer](https://user-images.githubusercontent.com/82072640/199833977-72411710-9c56-4ab8-bddf-a77f56688fee.jpg)
+![image](https://user-images.githubusercontent.com/82072640/200446586-391a1c29-4807-4a75-933d-43bed32b847b.png)
 
 # Usabilidade WEB:
 
