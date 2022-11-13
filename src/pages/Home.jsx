@@ -39,6 +39,7 @@ function Home() {
   const [climate, setClimate] = useState([]);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
 
   function clickExit() {
@@ -67,6 +68,7 @@ function Home() {
   const onSuggestHandler = (text) => {
     setText(text);
     setSuggestions([]);
+    setLoading(true);
     const loadData = async () => {
       const response = await axios.get(Url);
       const dataClimate = response.data.data[1].data;
@@ -74,6 +76,7 @@ function Home() {
         return obj.locale.name === text;
       });
       setClimate(filterArray[0].weather);
+      setLoading(false);
     };
     loadData();
   };
@@ -125,7 +128,12 @@ function Home() {
         <ContainerCards>
           <TitleClimate>Previsão</TitleClimate>
           <BodyCards>
-            {!!climate.length && (
+            {loading && (
+              <BodyLoading>
+                <Loading />
+              </BodyLoading>
+            )}
+            {!!climate.length && !loading && (
               <Slider {...settings}>
                 {climate.map((clima, id) => (
                   <div key={id}>
@@ -349,6 +357,30 @@ const BodyCards = styled.div`
     width: 143%;
     height: 150%;
     margin-top: 10%;
+  }
+`;
+
+const BodyLoading = styled.div`
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: scale(5);
+`;
+
+const Loading = styled.div`
+  animation: is-rotating 1s infinite;
+  width: 10px;
+  height: 10px;
+  margin-top: 10%;
+  border: 2px solid #e5e5e5;
+  border-top-color: #51d4db;
+  border-radius: 50%;
+
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
   }
 `;
 
