@@ -40,6 +40,7 @@ function Home() {
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(null);
+  const [loadingSearch, setLoadingSearch] = useState(null);
   const navigate = useNavigate();
 
   function clickExit() {
@@ -83,6 +84,7 @@ function Home() {
 
   const onChangeHandle = (text) => {
     let matches = [];
+    setLoadingSearch(true);
     if (text.length > 0) {
       matches = options.filter((item) => {
         const regex = new RegExp(`${text}`, "gi");
@@ -91,6 +93,7 @@ function Home() {
     }
     //console.log("matches", matches);
     setSuggestions(matches);
+    setLoadingSearch(false);
     setText(text);
   };
 
@@ -110,6 +113,11 @@ function Home() {
             type="text"
             placeholder="Localidade..."
           />
+          {loadingSearch && (
+            <BodyLoading>
+              <Loading />
+            </BodyLoading>
+          )}
           {!!suggestions.length && (
             <Paper>
               <TextPaper>Você está buscando por...</TextPaper>
