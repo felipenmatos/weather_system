@@ -1,3 +1,7 @@
+# Weather System
+
+![project4](https://user-images.githubusercontent.com/82072640/206579047-3d327726-adc9-4614-ae62-01bd993a7bd7.jpg)
+
 # Introdução:
 
 O projeto consiste em um desenvolvimento do aplicativo Web e Mobile CLIMATEMPO, onde é possível efetuar o login e pesquisar o clima em determinada região, com regra de autocomplete e renderização de cards com detalhamento do tempo por data. O projeto em si tem como baixa/média escalabilidade no qual foi adaptado a algumas práticas de Clean Code para otimizar o resultado.
